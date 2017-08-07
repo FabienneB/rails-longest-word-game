@@ -1,0 +1,15 @@
+
+<div class= "text-center element_padding grid-pimp">
+  <%= @my_grid %>
+</div>
+
+
+<div class= "element_padding">
+  <h3 class= "text-center text-pimp"> Let's play ! </h3>
+  <form action="/score" method = "get" class = "form-inline text-center">
+    <input type="text" id="question_game" name="query" placeholder="what is your quess ?" class= "form-control">
+    <input type="hidden" id="start_time" name="start_time" value = "<%= @start_time %>">
+    <input type="hidden" id="grid" name="my_grid" value = "<%= @my_grid %>">
+    <input type="submit" value="Let's play!" class= "btn btn-primary">
+  </form>
+</div>

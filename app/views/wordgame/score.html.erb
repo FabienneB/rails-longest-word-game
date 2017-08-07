@@ -1,0 +1,13 @@
+
+<% if @score == 0 %>
+ <h3 class = "text-center element_padding font_pink"> <%= @message %> </h3>
+<% else %>
+<div class = "element-center">
+  <div class = "element_border">
+    <h3 class= "text-center font_pink no-padding"> <%= @message %></h3>
+    <h3 class= "text-center">Your score is <%= @score.round(1)%> ! </h3>
+  </div>
+</div>
+<% end %>
+
+
