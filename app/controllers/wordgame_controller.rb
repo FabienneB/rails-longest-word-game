@@ -33,7 +33,7 @@ class WordgameController < ApplicationController
     @my_grid = params[:my_grid].split("")
     @message = ""
     if exist?(@word) && word_in_grid?(@word, @my_grid)
-      @score = ((1 + @word.length.fdiv(@my_grid.length) * @word.length) / @time.to_f) * 100
+      @score = ((1 + @word.length.fdiv(@my_grid.length)) * @word.length).fdiv(@time.to_f) * 100
       @message = "Bien ouej !"
     elsif !exist?(@word)
       @score = 0
